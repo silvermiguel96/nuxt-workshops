@@ -1,5 +1,10 @@
 <template>
-  <h1>{{ mensaje }}</h1>
+  <div class="">
+    <h1>Albums de la pagina</h1>
+    <div v-for="album in albums" :key="album.title">
+      <p>{{ album.title }}</p>
+    </div>
+  </div>
 </template>
 <script>
 import axios from "axios";
@@ -8,12 +13,12 @@ export default {
   name: "IndexPage",
   data() {
     return {
-      mensaje: ""
+      albums: []
     };
   },
   created() {
     axios.get(`${env.endpoint}/albums`).then(response => {
-      this.mensaje = response.status;
+      this.albums = response.data;
     });
   }
 };
