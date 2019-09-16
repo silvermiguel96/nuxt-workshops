@@ -1,16 +1,19 @@
 <template>
   <div class="">
     <h1>Albums de la pagina</h1>
-    <div v-for="album in albums" :key="album.title">
-      <p>{{ album.title }}</p>
-    </div>
+    <AlbumCard :album="album" v-for="album in albums" :key="album.id" />
   </div>
 </template>
 <script>
+
 import axios from "axios";
 import env from "../config/env";
+import AlbumCard from "../components/AlbumCard"
 export default {
   name: "IndexPage",
+  components: {
+    AlbumCard
+  },
   data() {
     return {
       albums: []
