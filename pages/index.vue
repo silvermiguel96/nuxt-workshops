@@ -1,6 +1,8 @@
 <template lang="html">
   <div class="container">
+    <header>
     <h1 class="title">Albums de la pagina</h1>
+    </header>
     <div class="columns is-multiline">
       <AlbumCard :album="album" v-for="album in albums" :key="album.id" />
     </div>
@@ -27,5 +29,6 @@ export default {
 };
 </script>
 
-<style scoped>
+<style >
+
 </style>

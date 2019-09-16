@@ -1,0 +1,15 @@
+.container {
+  transition: all 0.4s ease-in;
+}
+
+.page-enter-active, .pager-leave-active {
+  transition: opacity .5s
+}
+
+.pager-enter, .page-active {
+  opacity: 0
+}
+
+header {
+  margin: 100px 0 100px 0;
+}

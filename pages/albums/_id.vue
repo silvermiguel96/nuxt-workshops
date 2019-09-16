@@ -42,7 +42,4 @@ export default {
 .container {
   text-align: center;
 }
-header {
-  margin: 100px 0 100px 0;
-}
 </style>
