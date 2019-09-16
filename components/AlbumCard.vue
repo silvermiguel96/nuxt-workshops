@@ -1,20 +1,26 @@
 <template>
-  <div>
-    <h3>{{album.title}}</h3>
-    <a href="#">Ver album</a>
+  <div class="column is-one-quarter">
+    <div class="box">
+      <h3>{{album.title}}</h3>
+      <a href="#" class="button is-primary">Ver album</a>
+    </div>
   </div>
-  
 </template>
 
 <script>
 export default {
-  name: 'AlbumCard',
+  name: "AlbumCard",
   props: {
     album: Object
   }
-}
+};
 </script>
 
 <style scoped>
-
+.box {
+  padding: 1em;
+}
+h3{
+  min-height: 5.5em;
+}
 </style>
